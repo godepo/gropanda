@@ -1,0 +1,13 @@
+all: True
+dir: ./
+structname: "Mock{{.InterfaceName}}"
+filename: "mock_{{.InterfaceName}}_test.go"
+force-file-write: true
+pkgname: gropanda
+packages:
+  github.com/godepo/gropanda:
+    config:
+      all: False
+    interfaces:
+      PandaContainer:
+        config:
